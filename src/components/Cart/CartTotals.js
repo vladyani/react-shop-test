@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PayPalButton from './PayPalButton';
 
-const CartTotals = ({ cartSubTotal, cartTax, cartTotal, clearCart }) => (
+const CartTotals = ({ cartSubTotal, cartTax, cartTotal, clearCart, history }) => (
     <div className='container'>
         <div className='row'>
             <div className='col-10 mt-2 ml-sm-5 ml-md-auto col-sm-8 text-capitalize text-right'>
@@ -28,6 +29,10 @@ const CartTotals = ({ cartSubTotal, cartTax, cartTotal, clearCart }) => (
                         total: <strong>$ {cartTotal}</strong>
                     </span>
                 </h5>
+                <PayPalButton
+                    total={cartTotal}
+                    clearCart={clearCart}
+                    history={history} />
             </div>
         </div>
     </div>

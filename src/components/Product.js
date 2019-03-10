@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { ProductWrapper } from "./styles/productStyles";
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 const Product = ({ product: { id, title, img, price, inCart }, handleDetail, addToCart, toggleModal }) => (
   <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
@@ -37,14 +37,14 @@ const Product = ({ product: { id, title, img, price, inCart }, handleDetail, add
   </ProductWrapper>
 );
 
-Product.propTypes = {
-  product: PropTypes.shape({
-    id: PropTypes.number,
-    img: PropTypes.string,
-    title: PropTypes.string,
-    price: PropTypes.number,
-    inCart: PropTypes.boolean
-  }).isRequired
-};
+// Product.propTypes = {
+//   product: PropTypes.shape({
+//     id: PropTypes.number,
+//     img: PropTypes.string,
+//     title: PropTypes.string,
+//     price: PropTypes.number,
+//     inCart: PropTypes.boolean
+//   }).isRequired
+// };
 
 export default Product;
